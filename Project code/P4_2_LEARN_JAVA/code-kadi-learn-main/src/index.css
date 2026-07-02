@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Java Learning App Design System
+  Inspired by Lovable's dark gradient aesthetic
+  Deep navy → Electric blue → Magenta/Pink gradient
+*/
+
+@layer base {
+  :root {
+    /* Core palette - Dark mode by default */
+    --background: 228 25% 8%;
+    --foreground: 210 40% 96%;
+
+    --card: 228 20% 12%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 228 20% 10%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 330 85% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 80% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 228 20% 18%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 280 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 228 20% 20%;
+    --input: 228 20% 15%;
+    --ring: 330 85% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradient colors */
+    --gradient-start: 228 50% 12%;
+    --gradient-mid: 215 70% 35%;
+    --gradient-end: 330 80% 55%;
+    
+    /* Java accent */
+    --java-orange: 25 95% 55%;
+    --java-blue: 200 90% 50%;
+    
+    /* Success/Error for exercises */
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Glass effect */
+    --glass-bg: 228 25% 12% / 0.7;
+    --glass-border: 0 0% 100% / 0.1;
+
+    --sidebar-background: 228 25% 10%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 330 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 228 20% 18%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 228 20% 20%;
+    --sidebar-ring: 330 85% 60%;
+  }
+
+  .dark {
+    --background: 228 25% 8%;
+    --foreground: 210 40% 96%;
+    --card: 228 20% 12%;
+    --card-foreground: 210 40% 96%;
+    --popover: 228 20% 10%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 330 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 80% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 228 20% 18%;
+    --muted-foreground: 215 20% 60%;
+    --accent: 280 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 228 20% 20%;
+    --input: 228 20% 15%;
+    --ring: 330 85% 60%;
+    --sidebar-background: 228 25% 10%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 330 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 228 20% 18%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 228 20% 20%;
+    --sidebar-ring: 330 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  /* Main gradient background - Lovable style */
+  .gradient-bg {
+    background: linear-gradient(
+      180deg,
+      hsl(228 50% 8%) 0%,
+      hsl(220 60% 15%) 20%,
+      hsl(215 70% 35%) 50%,
+      hsl(280 60% 45%) 75%,
+      hsl(330 80% 55%) 100%
+    );
+  }
+  
+  /* Radial gradient overlay for depth */
+  .gradient-radial {
+    background: radial-gradient(
+      ellipse at 50% 0%,
+      hsl(215 80% 40% / 0.3) 0%,
+      transparent 70%
+    );
+  }
+  
+  /* Glass card effect */
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 40px -10px hsl(330 85% 60% / 0.5);
+  }
+  
+  .glow-secondary {
+    box-shadow: 0 0 40px -10px hsl(215 80% 55% / 0.5);
+  }
+  
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(330 85% 65%), hsl(215 80% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Code block styling */
+  .code-block {
+    background: hsl(228 30% 6%);
+    border: 1px solid hsl(228 20% 18%);
+    border-radius: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  /* Flashcard flip animation */
+  .flashcard-container {
+    perspective: 1000px;
+  }
+  
+  .flashcard-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flashcard-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard-front,
+  .flashcard-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .flashcard-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* Smooth transitions */
+  .transition-all-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Pulse animation for buttons */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px -5px hsl(330 85% 60% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 30px -5px hsl(330 85% 60% / 0.6);
+    }
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  /* Progress bar gradient */
+  .progress-gradient {
+    background: linear-gradient(90deg, hsl(215 80% 55%), hsl(330 85% 60%));
+  }
+}

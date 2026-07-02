@@ -1,0 +1,398 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* FamilySync Design System - Warm, friendly, organized */
+
+@layer base {
+  :root {
+    /* Warm cream/peach palette */
+    --background: 40 30% 98%;
+    --foreground: 220 25% 20%;
+
+    --card: 40 40% 99%;
+    --card-foreground: 220 25% 20%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 220 25% 20%;
+
+    /* Warm coral primary */
+    --primary: 12 76% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft sage secondary */
+    --secondary: 150 25% 92%;
+    --secondary-foreground: 150 30% 30%;
+
+    /* Gentle muted tones */
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 15% 50%;
+
+    /* Soft lavender accent */
+    --accent: 260 40% 94%;
+    --accent-foreground: 260 50% 40%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 12 76% 61%;
+
+    --radius: 0.75rem;
+
+    /* Activity colors */
+    --school: 210 80% 55%;
+    --school-light: 210 80% 94%;
+    --training: 145 60% 45%;
+    --training-light: 145 60% 92%;
+    --music: 280 60% 55%;
+    --music-light: 280 60% 94%;
+    --other: 35 80% 55%;
+    --other-light: 35 80% 92%;
+
+    /* Sidebar */
+    --sidebar-background: 40 30% 96%;
+    --sidebar-foreground: 220 25% 25%;
+    --sidebar-primary: 12 76% 61%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 30% 92%;
+    --sidebar-accent-foreground: 220 25% 25%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 12 76% 61%;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(12 76% 61%) 0%, hsl(35 80% 60%) 100%);
+    --gradient-hero: linear-gradient(160deg, hsl(40 30% 98%) 0%, hsl(40 40% 95%) 50%, hsl(12 50% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(40 40% 99%) 0%, hsl(40 30% 97%) 100%);
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 12 70% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 20% 20%;
+    --secondary-foreground: 150 30% 85%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 260 30% 25%;
+    --accent-foreground: 260 40% 85%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 12 70% 55%;
+
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 12 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 12 70% 55%;
+
+    --gradient-warm: linear-gradient(135deg, hsl(12 70% 55%) 0%, hsl(35 70% 50%) 100%);
+    --gradient-hero: linear-gradient(160deg, hsl(220 25% 10%) 0%, hsl(220 25% 12%) 50%, hsl(220 20% 15%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(220 25% 12%) 0%, hsl(220 25% 10%) 100%);
+  }
+
+  /* Theme variants - Dramatic color changes */
+  .theme-ocean {
+    --primary: 200 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --background: 200 60% 92%;
+    --foreground: 200 80% 15%;
+    --card: 200 50% 97%;
+    --card-foreground: 200 80% 15%;
+    --accent: 180 60% 85%;
+    --accent-foreground: 180 70% 25%;
+    --muted: 200 40% 88%;
+    --muted-foreground: 200 30% 40%;
+    --border: 200 40% 82%;
+    --ring: 200 85% 50%;
+    --gradient-warm: linear-gradient(135deg, hsl(200 85% 50%) 0%, hsl(180 70% 55%) 100%);
+  }
+
+  .theme-forest {
+    --primary: 145 55% 45%;
+    --primary-foreground: 0 0% 100%;
+    --background: 145 40% 92%;
+    --foreground: 145 50% 15%;
+    --card: 145 35% 97%;
+    --card-foreground: 145 50% 15%;
+    --accent: 145 40% 85%;
+    --accent-foreground: 145 50% 20%;
+    --muted: 145 30% 88%;
+    --muted-foreground: 145 25% 40%;
+    --border: 145 30% 82%;
+    --ring: 145 55% 45%;
+    --gradient-warm: linear-gradient(135deg, hsl(145 55% 45%) 0%, hsl(120 45% 50%) 100%);
+  }
+
+  .theme-sunset {
+    --primary: 25 90% 55%;
+    --primary-foreground: 0 0% 100%;
+    --background: 35 80% 92%;
+    --foreground: 25 70% 18%;
+    --card: 35 70% 97%;
+    --card-foreground: 25 70% 18%;
+    --accent: 35 80% 85%;
+    --accent-foreground: 25 80% 25%;
+    --muted: 35 60% 88%;
+    --muted-foreground: 25 40% 45%;
+    --border: 35 50% 82%;
+    --ring: 25 90% 55%;
+    --gradient-warm: linear-gradient(135deg, hsl(25 90% 55%) 0%, hsl(350 75% 60%) 100%);
+  }
+
+  .theme-galaxy {
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --background: 270 40% 15%;
+    --foreground: 270 30% 95%;
+    --card: 270 35% 20%;
+    --card-foreground: 270 30% 95%;
+    --accent: 280 50% 30%;
+    --accent-foreground: 280 40% 90%;
+    --muted: 270 30% 25%;
+    --muted-foreground: 270 20% 70%;
+    --border: 270 30% 30%;
+    --ring: 270 70% 60%;
+    --gradient-warm: linear-gradient(135deg, hsl(270 70% 60%) 0%, hsl(320 65% 55%) 100%);
+  }
+
+  .theme-berry {
+    --primary: 330 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --background: 330 50% 92%;
+    --foreground: 330 60% 18%;
+    --card: 330 40% 97%;
+    --card-foreground: 330 60% 18%;
+    --accent: 340 60% 85%;
+    --accent-foreground: 330 60% 30%;
+    --muted: 330 40% 88%;
+    --muted-foreground: 330 30% 45%;
+    --border: 330 40% 82%;
+    --ring: 330 70% 55%;
+    --gradient-warm: linear-gradient(135deg, hsl(330 70% 55%) 0%, hsl(280 60% 55%) 100%);
+  }
+
+  /* Kid-friendly themes - Very dramatic */
+  .theme-spiderman {
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --background: 210 70% 22%;
+    --foreground: 0 0% 98%;
+    --card: 210 60% 28%;
+    --card-foreground: 0 0% 98%;
+    --accent: 0 80% 45%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 210 50% 32%;
+    --muted-foreground: 210 20% 75%;
+    --border: 210 50% 38%;
+    --ring: 0 85% 50%;
+    --gradient-warm: linear-gradient(135deg, hsl(0 85% 50%) 0%, hsl(210 90% 40%) 100%);
+  }
+
+  .theme-disney {
+    --primary: 280 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --background: 280 60% 92%;
+    --foreground: 280 70% 18%;
+    --card: 280 50% 97%;
+    --card-foreground: 280 70% 18%;
+    --accent: 45 100% 80%;
+    --accent-foreground: 45 90% 25%;
+    --muted: 280 40% 88%;
+    --muted-foreground: 280 30% 45%;
+    --border: 280 40% 82%;
+    --ring: 280 80% 55%;
+    --gradient-warm: linear-gradient(135deg, hsl(280 80% 55%) 0%, hsl(45 100% 50%) 100%);
+  }
+
+  .theme-frozen {
+    --primary: 200 90% 65%;
+    --primary-foreground: 220 80% 15%;
+    --background: 200 70% 90%;
+    --foreground: 220 60% 20%;
+    --card: 200 60% 96%;
+    --card-foreground: 220 60% 20%;
+    --accent: 220 80% 85%;
+    --accent-foreground: 200 80% 30%;
+    --muted: 200 50% 86%;
+    --muted-foreground: 200 40% 45%;
+    --border: 200 50% 80%;
+    --ring: 200 90% 65%;
+    --gradient-warm: linear-gradient(135deg, hsl(200 90% 70%) 0%, hsl(220 80% 85%) 100%);
+  }
+
+  .theme-kpop {
+    --primary: 330 90% 60%;
+    --primary-foreground: 0 0% 100%;
+    --background: 330 60% 92%;
+    --foreground: 330 70% 18%;
+    --card: 330 50% 97%;
+    --card-foreground: 330 70% 18%;
+    --accent: 280 80% 85%;
+    --accent-foreground: 330 80% 30%;
+    --muted: 330 40% 88%;
+    --muted-foreground: 330 30% 45%;
+    --border: 330 50% 82%;
+    --ring: 330 90% 60%;
+    --gradient-warm: linear-gradient(135deg, hsl(330 90% 60%) 0%, hsl(280 80% 65%) 100%);
+  }
+
+  .theme-anime {
+    --primary: 350 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --background: 350 50% 92%;
+    --foreground: 350 60% 18%;
+    --card: 350 40% 97%;
+    --card-foreground: 350 60% 18%;
+    --accent: 40 100% 85%;
+    --accent-foreground: 350 75% 30%;
+    --muted: 350 30% 88%;
+    --muted-foreground: 350 25% 45%;
+    --border: 350 40% 82%;
+    --ring: 350 85% 55%;
+    --gradient-warm: linear-gradient(135deg, hsl(350 85% 55%) 0%, hsl(40 100% 50%) 100%);
+  }
+
+  .theme-football {
+    --primary: 120 65% 38%;
+    --primary-foreground: 0 0% 100%;
+    --background: 120 50% 90%;
+    --foreground: 120 50% 15%;
+    --card: 120 40% 96%;
+    --card-foreground: 120 50% 15%;
+    --accent: 35 90% 82%;
+    --accent-foreground: 120 50% 20%;
+    --muted: 120 30% 88%;
+    --muted-foreground: 120 25% 45%;
+    --border: 120 35% 82%;
+    --ring: 120 65% 38%;
+    --gradient-warm: linear-gradient(135deg, hsl(120 65% 38%) 0%, hsl(35 90% 45%) 100%);
+  }
+
+  .theme-basketball {
+    --primary: 25 95% 50%;
+    --primary-foreground: 0 0% 100%;
+    --background: 25 50% 90%;
+    --foreground: 25 60% 15%;
+    --card: 25 40% 96%;
+    --card-foreground: 25 60% 15%;
+    --accent: 25 90% 82%;
+    --accent-foreground: 25 80% 25%;
+    --muted: 25 35% 88%;
+    --muted-foreground: 25 30% 45%;
+    --border: 25 40% 82%;
+    --ring: 25 95% 50%;
+    --gradient-warm: linear-gradient(135deg, hsl(25 95% 50%) 0%, hsl(0 0% 20%) 100%);
+  }
+
+  .theme-gaming {
+    --primary: 270 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --background: 270 50% 12%;
+    --foreground: 150 80% 90%;
+    --card: 270 40% 18%;
+    --card-foreground: 150 80% 90%;
+    --accent: 150 100% 40%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 270 35% 22%;
+    --muted-foreground: 270 20% 70%;
+    --border: 270 40% 28%;
+    --ring: 270 100% 55%;
+    --gradient-warm: linear-gradient(135deg, hsl(270 100% 55%) 0%, hsl(150 100% 45%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .activity-school {
+    background-color: hsl(var(--school-light));
+    border-left: 4px solid hsl(var(--school));
+  }
+
+  .activity-training {
+    background-color: hsl(var(--training-light));
+    border-left: 4px solid hsl(var(--training));
+  }
+
+  .activity-music {
+    background-color: hsl(var(--music-light));
+    border-left: 4px solid hsl(var(--music));
+  }
+
+  .activity-other {
+    background-color: hsl(var(--other-light));
+    border-left: 4px solid hsl(var(--other));
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Floating animation for theme decorations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(-3deg);
+    }
+    75% {
+      transform: translateY(-25px) rotate(3deg);
+    }
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+}
