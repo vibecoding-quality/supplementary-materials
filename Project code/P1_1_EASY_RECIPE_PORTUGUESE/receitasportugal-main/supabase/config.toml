@@ -1,0 +1,7 @@
+project_id = "djmgtorjkwlhholbzbxc"
+
+[functions.scrape-recipe]
+verify_jwt = false
+
+[functions.generate-recipe]
+verify_jwt = false
