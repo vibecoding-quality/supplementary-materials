@@ -1,0 +1,15 @@
+                  
+                  
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+                                                                                                  
+  [36m[22m[24m  C:\Users\kadi2\experiment_lovable\P2_WIKI_IMAGES_SPACE_GAME\dimwalker-main\.env[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+            2┆ VITE_SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
+               sInJlZiI6ImhkZGxsd3lndmh5aWdxdW9sd3dhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1MzY4MTksImV4cCI6Mj
+               A4NTExMjgxOX0.3DZdleAOYfnUc4m7aY3h1KLM8KUYT0N4w633Bi2DvAk"                                 

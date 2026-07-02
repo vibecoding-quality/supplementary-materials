@@ -1,0 +1,15 @@
+                  
+                  
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+                                                                                                           
+  [36m[22m[24m  C:\Users\kadi2\experiment_lovable\P4_DAILY_INSPIRATIONAL_QUOTE\daily-light-joy-main\.env[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+            2┆ VITE_SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
+               sInJlZiI6InV1b2R2ZGZ4aXVldnp2anFwYmt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAwNTAzMDYsImV4cCI6Mj
+               A4NTYyNjMwNn0.hCG0h9BuCLSG4FJ7F2iD3zYNrAxXlr8HuxP8j9JdXCs"                                 

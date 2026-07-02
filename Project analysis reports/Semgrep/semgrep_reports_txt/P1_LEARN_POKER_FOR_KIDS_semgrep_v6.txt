@@ -1,0 +1,15 @@
+                  
+                  
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+                                                                                                       
+  [36m[22m[24m  C:\Users\kadi2\experiment_lovable\P1_LEARN_POKER_FOR_KIDS\chipspokerschool-main\.env[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+            2┆ VITE_SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
+               sInJlZiI6InJpYWxpcXJqcGFid2lwbmN0dnJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0NDI3NTAsImV4cCI6Mj
+               A4NTAxODc1MH0.ylUjZSw2X0FpiFLuRdwv6vBe5kCqRQkGyt3stk_fJ_g"                                 

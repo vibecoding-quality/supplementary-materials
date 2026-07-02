@@ -1,0 +1,15 @@
+                  
+                  
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+                                                                                                 
+  [36m[22m[24m  C:\Users\kadi2\experiment_lovable\P3_PLANT_CARE_APP\plant-parent-pal-main\.env[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+            2┆ VITE_SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
+               sInJlZiI6ImJhcnZvaHJxenZ0emNhY3Nma25zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk2Mjk0NDIsImV4cCI6Mj
+               A4NTIwNTQ0Mn0.aBuOYuTWmfhh41GFJhDKoIF645kyMrtaWaJtSZuUuzg"                                 

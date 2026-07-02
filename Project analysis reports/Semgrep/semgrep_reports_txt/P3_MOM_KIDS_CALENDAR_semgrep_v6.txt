@@ -1,0 +1,15 @@
+                  
+                  
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+                                                                                                 
+  [36m[22m[24m  C:\Users\kadi2\experiment_lovable\P3_MOM_KIDS_CALENDAR\home-hub-time-main\.env[0m
+   ❯❯❱ [1mgeneric.secrets.security.detected-jwt-token.detected-jwt-token[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          JWT token detected          
+          Details: https://sg.run/05N5
+                                      
+            2┆ VITE_SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
+               sInJlZiI6InB6eWJ4bnhubHdzZ3pjdmN0YXlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk2MjMwMzAsImV4cCI6Mj
+               A4NTE5OTAzMH0.FY610xEOPgYdgV9g3G_vx_OlufE-9Tc22nvzojj7snw"                                 
